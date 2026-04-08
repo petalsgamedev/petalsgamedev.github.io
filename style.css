@@ -264,7 +264,7 @@ button:hover, .btn:hover {
   align-items:center;
   gap:30px;
   height:60px;
-  margin-top:-60px
+  margin-top:-60px;
   flex-wrap: wrap;
 }
 
