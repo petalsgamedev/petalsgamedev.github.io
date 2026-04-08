@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Petals! GameDev</title>
+
+  <link rel="icon" href="img/futuroico.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+<header id="header">
+  <nav class="nav">
+    <ul class="menu left">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#juegos">Juegos</a></li>
+    </ul>
+    <div class="center-logo">
+      <img src="img/SmallNavIcon.png">
+    </div>
+    <ul class="menu right">
+      <li><a href="#about">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="eventos">
+  <div class="eventos-overlay-content">
+    <img src="img/petals-icon.png" alt="Petals logo">
+    <div class="titulo">
+      <h2>Petals!</h2>
+      <p class="slogan"><b>¡Haciendo florecer el entretenimiento en todo el mundo!</b></p>
+    </div>
+  </div>
+
+  <div class="slider" id="slider1"></div>
+  <div class="slider" id="slider2"></div>
+  <div class="slider" id="slider3"></div>
+  <div class="slider" id="slider4"></div>
+</section>
+
+<!-- ******************************************************************************************* -->
+
+<section class="hero">
+  <div class="hero-bg">
+    <video autoplay muted loop>
+      <source src="img/c1c2-background-vid.mp4">
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-cta">
+      <img src="img/logocube.png" class="hero-logo">
+      <div class="hero-info">¡Participa en un enfrentamiento épico y domina el campo de batalla cúbico!<br>¿Listo para entrar en la arena y participar en desafiantes batallas?</div>
+      <div class="award">
+        <img src="img/medalla.png" alt="Medalla">
+        <div>
+          <div class="award-title">Mejor Videojuego - 62.7%</div>
+          <div class="award-sub">Bahía Expo Game 2025</div>
+        </div>
+      </div>
+      <button style="background:rgb(40,40,120);">
+        <img src="img/steam.png" style="width:24px;">
+        <b>Disponible en Steam</b>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ******************************************************************************************* -->
+
+<section class="nosotros" id="nosotros">
+  <h2>Nosotros!</h2>
+
+  <div class="team">
+    <!-- Jeremias -->
+    <div class="member">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="img/eventos/expogame2.JPG" alt="Jeremias Petals">
+        </div>
+        <div class="card-back">
+          <h3 class="nickname" style="text-shadow: 0 0 10px magenta;">Petals</h3>
+          <h4 class="realname">Jeremías Atala</h4><br><br>
+
+          <p>
+            Director, Productor, y Artista.<br>
+            Estudiante de Técnicatura Universitaria en Programación.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Luca -->
+    <div class="member">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="img/eventos/luca.jpeg" alt="Luca Zappy">
+        </div>
+        <div class="card-back" style="background:linear-gradient(to top,rgb(80,40,0),rgb(160,80,0));">
+          <h3 class="nickname" style="text-shadow: 0 0 10px orange;">Zappy</h3>
+          <h4 class="realname">Luca Staffa</h4><br><br>
+          <p>
+            Programador, Compositor y Game Designer.<br>
+            Estudiante de Licenciatura en Computación.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ******************************************************************************************* -->
+<footer>
+
+  <div class="socials">
+    <img src="img/icon-yt-blanco.png">
+    <img src="img/icon-ig-blanco.png">
+    <img src="img/icon-twt-blanco.png">
+    <img src="img/icon-tt-blanco.png">
+    <img src="img/icon-mail-blanco.png">
+  </div>
+
+  <p>© 2026 Petals GameDev</p>
+
+</footer>
+
+</body>
+
+<script>
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+
+  const footer = document.querySelector("footer");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      footer.classList.add("visible");
+    } else {
+      footer.classList.remove("visible");
+    }
+  });
+
+const baseImages = [
+  "expogame1.jpeg",
+  "miku1.jpg",
+  "miku2.jpeg",
+  "expogame2.JPG",
+  "hub1.png",
+  "fisa1.png",
+  "rock2.jpeg",
+  "rock3.png",
+  "rock4.png"
+];
+
+function shuffle(array) {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
+const sliderIds = ["slider1", "slider2", "slider3", "slider4"];
+
+sliderIds.forEach(id => {
+  const container = document.getElementById(id);
+
+  const track = document.createElement("div");
+  track.classList.add("slide-track");
+
+  // 🔥 mezcla distinta para cada slider
+  const images = shuffle(baseImages);
+
+  // duplicamos para loop
+  const fullList = [...images, ...images];
+
+  fullList.forEach(img => {
+    const image = document.createElement("img");
+    image.src = "img/eventos/" + img;
+    track.appendChild(image);
+  });
+
+  container.appendChild(track);
+});
+</script>
+
+</html>
