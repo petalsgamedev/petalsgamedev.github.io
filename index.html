@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Petals GameDev - Desarrollo de videojuegos indie, eventos y experiencias interactivas en Argentina.">
+  <meta property="og:title" content="Petals GameDev">
+  <meta property="og:description" content="Haciendo florecer el entretenimiento en todo el mundo">
+  <meta property="og:image" content="img/petals-icon.png">
 
   <title>Petals! GameDev</title>
 
@@ -22,7 +26,7 @@
       <li><a href="#juegos">Juegos</a></li>
     </ul>
     <div class="center-logo">
-      <img src="img/SmallNavIcon.png">
+      <img src="img/SmallNavIcon.png" alt="Logo Petals">
     </div>
     <ul class="menu right">
       <li><a href="#about">Nosotros</a></li>
@@ -31,7 +35,7 @@
   </nav>
 </header>
 
-<section class="eventos">
+<section class="eventos" id="inicio">
   <div class="eventos-overlay-content">
     <img src="img/petals-icon.png" alt="Petals logo">
     <div class="titulo">
@@ -48,9 +52,9 @@
 
 <!-- ******************************************************************************************* -->
 
-<section class="hero">
+<section class="hero" id="juegos">
   <div class="hero-bg">
-    <video autoplay muted loop>
+    <video autoplay muted loop playsinline preload="none">
       <source src="img/c1c2-background-vid.mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -59,25 +63,69 @@
   <div class="hero-content">
     <div class="hero-cta">
       <img src="img/logocube.png" class="hero-logo">
-      <div class="hero-info">¡Participa en un enfrentamiento épico y domina el campo de batalla cúbico!<br>¿Listo para entrar en la arena y participar en desafiantes batallas?</div>
+      <button>
+        <img src="img/steam.png" style="width:24px;">
+        <b>Steam I 95%👍</b>
+      </button>
       <div class="award">
         <img src="img/medalla.png" alt="Medalla">
         <div>
-          <div class="award-title">Mejor Videojuego - 65.7%</div>
+          <div class="award-title">Mejor Videojuego I 65.7%</div>
           <div class="award-sub">Bahía Expo Game 2025</div>
         </div>
       </div>
-      <button style="background:linear-gradient(to right,rgb(40,40,120),rgb(80,80,240));">
-        <img src="img/steam.png" style="width:24px;">
-        <b>Disponible en Steam</b>
-      </button>
+    </div>
+  </div>
+</section>
+
+<section class="mini-heroes">
+  <div class="mini-hero">
+    <div class="mini-bg">
+      <video autoplay muted loop playsinline preload="none">
+        <source src="img/ep-background-vid.mp4">
+      </video>
+      <div class="mini-overlay"></div>
+    </div>
+
+    <div class="mini-content">
+      <img src="img/titulolunaria.png" class="mini-logo">
+      <div class="mini-buttons">
+        <a href="https://petals-studio.itch.io/lunaria-earth-protectors" target="_blank" class="btn itch">
+          <img src="img/itch.png">
+          <b>Itch.io</b>
+        </a>
+
+        <a href="https://play.google.com/store/apps/details?id=com.petalsgamedevelopment.petalsgamedev.lunariaearthprotectors&pcampaignid=web_share" target="_blank" class="btn play">
+          <img src="img/play_icon.png">
+          Google Play I 4.5⭐
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mini-hero">
+    <div class="mini-bg">
+      <video autoplay muted loop playsinline preload="none">
+        <source src="img/howmany-background.mp4">
+      </video>
+      <div class="mini-overlay" style="background:rgba(200,0,255,0.3);"></div>
+    </div>
+
+    <div class="mini-content" style="backdrop-filter: blur(4px);">
+      <img src="img/logohowmany.png" class="mini-logo" style="width:550px">
+      <div class="mini-buttons">
+        <a href="https://petals-studio.itch.io/lunaria-earth-protectors" target="_blank" class="btn itch">
+          <img src="img/itch.png">
+          <b>Itch.io</b>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ******************************************************************************************* -->
 
-<section class="nosotros" id="nosotros">
+<section class="nosotros" id="about">
   <h2>Nosotros!</h2>
 
   <div class="team">
@@ -85,7 +133,7 @@
     <div class="member">
       <div class="card-inner">
         <div class="card-front">
-          <img src="img/eventos/expogame2.JPG" alt="Jeremias Petals">
+          <img src="img/eventos/expogame2.png" alt="Jeremias Petals">
         </div>
         <div class="card-back">
           <h3 class="nickname" style="text-shadow: 0 0 10px magenta;">Petals</h3>
@@ -120,14 +168,38 @@
 </section>
 
 <!-- ******************************************************************************************* -->
+
+<section class="contacto" id="contacto" style="background:rgba(60,0,60,0.5)">
+  <h2 class="contacto-title">Contacto</h2>
+
+  <div class="contacto-container">
+    <div class="contacto-info">
+      <p class="contacto-desc">
+        ¡Nuestra agenda está abierta para eventos municipales y privados de videojuegos, anime o culturales en general!
+      </p>
+    </div>
+
+
+    <div class="contacto-images">
+      <img src="img/eventos/expogame1.png" class="img1">
+      <img src="img/eventos/hub1.png" class="img2">
+      <img src="img/eventos/fisa1.png" class="img3">
+    </div>
+  </div>
+</section>
+
+<!-- ******************************************************************************************* -->
 <footer>
 
   <div class="socials">
-    <img src="img/icon-yt-blanco.png">
-    <img src="img/icon-ig-blanco.png">
-    <img src="img/icon-twt-blanco.png">
-    <img src="img/icon-tt-blanco.png">
-    <img src="img/icon-mail-blanco.png">
+    <a href="https://youtube.com/@petalsgamedev" target="_blank">
+      <img src="img/icon-yt-blanco.png"></a>
+    <a href="https://instagram.com/petals.gamedev" target="_blank">
+      <img src="img/icon-ig-blanco.png"></a>
+    <a href="https://x.com/PetalsGameDev" target="_blank">
+      <img src="img/icon-twt-blanco.png"></a>
+    <a href="https://tiktok.com/@petalsgamedev" target="_blank">
+      <img src="img/icon-tt-blanco.png"></a>
   </div>
 
   <p>© 2026 Petals GameDev</p>
@@ -138,6 +210,7 @@
 
 <script>
   const header = document.getElementById("header");
+  const footer = document.querySelector("footer");
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
@@ -145,11 +218,7 @@
     } else {
       header.classList.remove("scrolled");
     }
-  });
 
-  const footer = document.querySelector("footer");
-
-  window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
       footer.classList.add("visible");
     } else {
@@ -158,12 +227,18 @@
   });
 
 const baseImages = [
-  "expogame1.jpeg",
+  "expogame1.png",
+  "expogame2.png",
+  "expogame3.png",
+  "expogame4.png",
+  "finde1.png",
+  "finde2.png",
+  "finde3.png",
+  "finde4.png",
+  "fisa1.png",
+  "hub1.png",
   "miku1.jpg",
   "miku2.jpeg",
-  "expogame2.JPG",
-  "hub1.png",
-  "fisa1.png",
   "rock2.jpeg",
   "rock3.png",
   "rock4.png"
