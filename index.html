@@ -65,7 +65,7 @@
       <img src="img/logocube.png" class="hero-logo">
       <button>
         <img src="img/steam.png" style="width:24px;">
-        <b>Steam I 95%👍</b>
+        <b>Disponible en Steam I 95%👍</b>
       </button>
       <div class="award">
         <img src="img/medalla.png" alt="Medalla">
@@ -84,10 +84,10 @@
       <video autoplay muted loop playsinline preload="none">
         <source src="img/ep-background-vid.mp4">
       </video>
-      <div class="mini-overlay"></div>
+      <div class="mini-overlay" style="background:rgba(200,0,255,0.3)"></div>
     </div>
 
-    <div class="mini-content">
+    <div class="mini-content" style="backdrop-filter: blur(4px);">
       <img src="img/titulolunaria.png" class="mini-logo">
       <div class="mini-buttons">
         <a href="https://petals-studio.itch.io/lunaria-earth-protectors" target="_blank" class="btn itch">
@@ -112,7 +112,7 @@
     </div>
 
     <div class="mini-content" style="backdrop-filter: blur(4px);">
-      <img src="img/logohowmany.png" class="mini-logo" style="width:550px">
+      <img src="img/logohowmany.png" class="mini-logo">
       <div class="mini-buttons">
         <a href="https://petals-studio.itch.io/lunaria-earth-protectors" target="_blank" class="btn itch">
           <img src="img/itch.png">
@@ -256,10 +256,8 @@ sliderIds.forEach(id => {
   const track = document.createElement("div");
   track.classList.add("slide-track");
 
-  // 🔥 mezcla distinta para cada slider
   const images = shuffle(baseImages);
 
-  // duplicamos para loop
   const fullList = [...images, ...images];
 
   fullList.forEach(img => {
